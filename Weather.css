@@ -1,0 +1,127 @@
+body{
+    background-image: url('Background.png');
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#Main-div{
+    border:2px solid yellow;
+    width:1400px;
+    height:800px;
+    margin:35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 30px;
+    gap: 15px;
+    
+}
+
+#Main-div-part1{
+    border-radius: 30px;
+    border:2px solid yellow;
+    text-align: center;
+    
+}
+
+
+#cityname{
+    border:1px solid black;
+    margin-top:50px;
+    height: 35px;
+    width: 200px;
+    border-radius:40px;
+    text-align: center;
+    background-color: rgb(204, 246, 215);
+    color:black;
+    font-weight: bold;
+    font-size: large;
+    transition: 'width 0.6s ease';
+}
+
+#cityname:focus{
+    transform: translateY(-1.5px);
+    background-color: rgb(249, 249, 249);
+    width: 550px;
+    transition: width 0.6s ease;
+}
+
+#search-btn{
+    border-radius:50%;
+    width: 35px;
+    height:35px;
+    background-color: rgb(214, 247, 223);
+    font-size: larger;
+    cursor: pointer;
+}
+
+
+
+#weather-icon-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:15px;
+    border: 1px solid yellow;
+}
+
+#weather-icon{
+    display: block;
+    width: 320px;
+    height: 320px; 
+    margin-top:5px;
+}
+
+#city{
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-weight:lighter;
+    margin-left:10px;
+    font-size: 30px;
+}
+
+#temperature{
+    color: white;
+    font-size: 65px;
+    font-weight: lighter;
+    margin: 0px auto 0px 260px;
+    padding: 0px;
+    cursor:default;
+    height: 63px;
+    width:130px;
+}
+
+#temperature:hover{
+    transform: translate3D(-1px,-1.5px,0px);
+}
+
+#weather-description-div{
+    border-radius: 30px;
+    border: 1px solid yellow;
+    margin-top: 10px;
+    margin-left: 28px;
+    text-align: start;
+    width: fit-content;
+    padding: 5px;
+    display: block;
+}
+
+#weather-description{
+    color: white;
+    font-size: 25px;
+    font-weight: lighter;
+    margin: 0px auto 0px auto;
+    padding: 0px;
+    cursor:default;
+}
+
+#all-weathers{
+    border: 1px solid white;
+    height:160px;
+    margin: 15px;
+}
+
+
+#Main-div-part2{
+    border:2px solid yellow;
+}
