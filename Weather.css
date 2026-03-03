@@ -1,5 +1,5 @@
 body {
-    background-image: url('Background.png');
+    background-color:rgb(7, 75, 47);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -61,9 +61,8 @@ body {
 
 #weather-icon {
     display: block;
-    width: 320px;
-    height: 320px;
-    margin-top: 30px;
+    font-size: 200px;
+    margin:50px 0px 30px 0px
 }
 
 #temperature {
@@ -130,7 +129,7 @@ body {
 }
 
 .box {
-    background-color: rgb(4, 36, 26);
+    background-color: rgb(3, 50, 35);
     border-radius: 30px;
     border: 1px solid white;
     width: 300px;
