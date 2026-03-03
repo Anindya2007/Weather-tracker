@@ -12,7 +12,7 @@
 <body>
     <div id="Main-div">
         <div id="Main-div-part1">
-            <input type="text" placeholder="📌 Enter city name" id="cityname" >
+            <input type="text" placeholder="📌 Enter city name" id="cityname">
             <button id="search-btn" onclick="getweather()">🔍</button>
 
             <div id="weather-icon-div">
@@ -21,22 +21,55 @@
             </div>
             <h3 id="city">-.-</h3>
             <h1 id="temperature">--°C</h1>
-
-            <div id="weather-description-div">
-                <h2 id="weather-description">Today</h2>
+            
+            <div id="high-low">
+            <h2>High: --°C</h2>
+            <h2>Low: --°C</h2>
             </div>
-
-            <div id="all-weathers"></div>
 
         </div>
 
+        <div id="Main-div-part2">
+            <h2>Today's Highlights</h2>
+
+            <div id="details">
+
+            <div id="Humidity" class="box">
+
+                <h2>Humidity</h2>
+                <h1>💦</h1>
+                <h3>--.--</h3>
+            </div>
+
+            <div id="Rain" class="box">
+                <h2>Chances of Rain</h2>
+                <h1>🌧️</h1>
+                <h3>--.--</h3>
+
+            </div>
+
+            <div id="wind-speed" class="box">
+                
+                <h2>Wind Speed</h2>
+                <h1>༄</h1>
+                <h3>--.--</h3>
+            </div>
+            
+            <div id="Pressure" class="box">
+                <h2>Pressure</h2>
+                <h1>🌡️</h1>
+                <h3>--.--</h3>
+            </div>
+
+            </div>
+
+        </div>
 
     </div>
 
 
-    <div id="Main-div-part2"></div>
 
-    </div>
+    
 
 
 

@@ -1,127 +1,166 @@
-body{
+body {
     background-image: url('Background.png');
     font-family: 'Poppins', sans-serif;
 }
 
-
-#Main-div{
-    border:2px solid yellow;
-    width:1400px;
-    height:800px;
-    margin:35px;
+#Main-div {
+    border: 2px solid yellow;
+    width: 1400px;
+    height: 800px;
+    margin: 35px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     border-radius: 30px;
     gap: 15px;
-    
 }
 
-#Main-div-part1{
+#Main-div-part1 {
     border-radius: 30px;
-    border:2px solid yellow;
+
+    border: 2px solid yellow;
     text-align: center;
-    
 }
 
-
-#cityname{
-    border:1px solid black;
-    margin-top:50px;
+#cityname {
+    border: 1px solid black;
+    margin-top: 50px;
     height: 35px;
     width: 200px;
-    border-radius:40px;
+    border-radius: 40px;
     text-align: center;
     background-color: rgb(204, 246, 215);
-    color:black;
+    color: black;
     font-weight: bold;
     font-size: large;
-    transition: 'width 0.6s ease';
+    cursor: pointer;
 }
 
-#cityname:focus{
-    transform: translateY(-1.5px);
-    background-color: rgb(249, 249, 249);
-    width: 550px;
-    transition: width 0.6s ease;
-}
-
-#search-btn{
-    border-radius:50%;
+#search-btn {
+    border-radius: 50%;
     width: 35px;
-    height:35px;
+    height: 35px;
     background-color: rgb(214, 247, 223);
     font-size: larger;
     cursor: pointer;
 }
 
+#search-btn:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    height: 38px;
+    width: 38px;
+    transition: smooth 0.8s;
+}
 
-
-#weather-icon-div{
+#weather-icon-div {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top:15px;
-    border: 1px solid yellow;
+    margin-top: 8px
 }
 
-#weather-icon{
+#weather-icon {
     display: block;
     width: 320px;
-    height: 320px; 
-    margin-top:5px;
+    height: 320px;
+    margin-top: 30px;
 }
 
-#city{
-    margin: 0px;
-    padding: 0px;
+#temperature {
     color: white;
-    font-weight:lighter;
-    margin-left:10px;
-    font-size: 30px;
-}
-
-#temperature{
-    color: white;
-    font-size: 65px;
+    font-size: 75px;
     font-weight: lighter;
-    margin: 0px auto 0px 260px;
-    padding: 0px;
-    cursor:default;
-    height: 63px;
-    width:130px;
+    margin: 10px auto 20px 225px;
+    padding: 4px;
+    cursor: default;
+    height: 65px;
+    width: 150px;
 }
 
-#temperature:hover{
-    transform: translate3D(-1px,-1.5px,0px);
-}
-
-#weather-description-div{
-    border-radius: 30px;
-    border: 1px solid yellow;
-    margin-top: 10px;
-    margin-left: 28px;
-    text-align: start;
-    width: fit-content;
+#city {
+    color: white;
+    font-weight: lighter;
+    font-size: 40px;
+    margin: 8px 0px 5px -8px;
     padding: 5px;
-    display: block;
 }
 
-#weather-description{
-    color: white;
-    font-size: 25px;
-    font-weight: lighter;
-    margin: 0px auto 0px auto;
-    padding: 0px;
-    cursor:default;
+#high-low{
+    display: flex;
+    justify-content: start;
+    gap: 50%;
+    font-size: larger;
+    color:white;
+    margin: 30px 0px 20px 0px;
+    padding:10px 10px 0px 45px;
 }
 
-#all-weathers{
+#all-weather {
+    border-radius: 30px;
     border: 1px solid white;
-    height:160px;
+    height: 160px;
     margin: 15px;
 }
 
 
-#Main-div-part2{
-    border:2px solid yellow;
+#Main-div-part2 {
+    border: 1px solid yellow;
+    border-radius: 30px;
+}
+
+#Main-div-part2 h2 {
+    color: white;
+    font-weight: lighter;
+    font-size: 30px;
+    margin: 20px 20px 30px 40px;
+    padding: 0px;
+    font-size: 40px;
+}
+
+#details {
+    border-radius: 30px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-left: 30px;
+    margin-right: 30px;
+    gap: 30px;
+
+}
+
+.box {
+    background-color: rgb(4, 36, 26);
+    border-radius: 30px;
+    border: 1px solid white;
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+}
+
+
+.box h1{
+    color: white;
+    font-size:100px;
+    margin-bottom: 0px;
+    margin-top:-1px;
+}
+
+.box h2{
+    font-size:26px;
+    margin-left:-13px;
+}
+
+.box h3{
+    color: white;
+    font-size: 25px;
+    margin-top: 0xp;
+
+}
+
+#Rain h2{
+    font-size:30px;
 }
