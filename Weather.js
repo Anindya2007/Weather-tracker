@@ -1,48 +1,44 @@
-// const cityname = document.getElementById('cityname').value;
-
-
-
-
-function cityname() {
-  const cityname = document.getElementById('cityname').value;
-  const name = cityname.trim();
-  cityname.value = '';
-  return name;
-}
-
 // For fetcing the data frotm the API
-async function apidata(name = cityname()) {
-  const apikey = '84224d66cece4298f15d44287a08afed';
-  const api = `https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${apikey}`;
+
+async function apidata(cityname) {
+  const apikey = '0441e7dcc94ee6ddd6a68df3843ca1e6';
+  const api = `https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${apikey}&units=metric`;
   const res = await fetch(api);
   const data = await res.json();
   return data;
 }
 
+
 //For using the data in the UI
+const button = document.getElementById('search-btn');
 
-function getweather() {
+button.addEventListener('click', async () => {
 
-  const dummyWeatherData = {
-    "name": "Mumbai",
-    "main": {
-      "temp": 30.5,
-      "feels_like": 33.2,
-      "humidity": 70
-    },
-    "weather": [
-      {
-        "main": "Clouds",
-        "description": "scattered clouds",
-        "icon": "03d"
-      }
-    ],
-    "wind": {
-      "speed": 4.5
+  const cityname = document.getElementById('cityname').value.trim();
+
+    if (!cityname){
+      alert('Please enter a city name!')
     }
-  };
-  let city = document.getElementById('city');
-  city.innerText = dummyWeatherData.name;
+
+  let display = document.getElementById('city');
   let temperature = document.getElementById('temperature');
-  temperature.innerText = `${dummyWeatherData.main.temp}°C`;
-}
+  let high = document.getElementById('high_text');
+  let low = document.getElementById('low_text');
+  let feels = document.getElementById('feels_like');
+  let wind = document.getElementById('wind-speed');
+  let pressure = document.getElementById('Pressure');
+  let humidity = document.getElementById('Humidity');
+
+  const data = await apidata(cityname);
+
+  display.innerText = cityname;
+  temperature.innerText = `${data.main.temp.toFixed(1)}°C`;
+  high.innerText = `High: ${data.main.temp_max.toFixed(1)}°C`;
+  low.innerText = `Low: ${data.main.temp_min.toFixed(1)}°C`;
+  feels.textContent = `${data.main.feels_like.toFixed(1)}`;
+  wind.textContent = `${data.wind.speed}`;
+  pressure.textContent = `${data.main.pressure}`;
+  humidity.textContent = `${data.main.humidity}`;
+
+})
+
