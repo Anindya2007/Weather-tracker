@@ -12,12 +12,13 @@ async function apidata(cityname) {
 //For using the data in the UI
 const button = document.getElementById('search-btn');
 
-button.addEventListener('click', async () => {
+button.addEventListener('click',async () => {
 
   const cityname = document.getElementById('cityname').value.trim();
 
     if (!cityname){
       alert('Please enter a city name!')
+      return
     }
 
   let display = document.getElementById('city');

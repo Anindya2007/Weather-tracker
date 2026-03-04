@@ -11,7 +11,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     border-radius: 30px;
-    gap: 15px;
+   
 }
 
 #Main-div-part1 {
@@ -140,29 +140,48 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-
+    
 }
 
+
+.box:hover{
+    background-color: rgb(5, 162, 113);
+    transform: translate3D(-1.3px,-3px,0px);
+    transition: smooth 4s ease-in-out;
+    border: 3px solid black;
+    width: 298px;
+    height: 298px;
+    color: black;
+   
+}
 
 .box h1{
     color: white;
     font-size:100px;
     margin-bottom: 0px;
     margin-top:-1px;
+    cursor:default;
 }
 
 .box h2{
     font-size:26px;
     margin-left:-13px;
+    cursor:default;
 }
 
 .box h3{
     color: white;
     font-size: 25px;
     margin-top: 0xp;
+    cursor:default;
 
 }
 
 #Rain h2{
     font-size:30px;
+}
+
+#feels_like{
+    margin-top: 0px;
+    padding-top: 0px;
 }
