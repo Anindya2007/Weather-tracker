@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="Weather.css">
 </head>
+
 <body>
     <div id="landing-page">
         <h1>DECODE THE SKY</h1>
@@ -13,23 +15,46 @@
         <button id="enter-btn">EXPLORE NOW</button>
     </div>
 
-    <div id="user-interface">
-        <div id="data-background">
-            <nav id="navbar">
-                <ul>
-                    <input type="text" id="city-input" placeholder="Enter city name">
-                    <button id="search-btn">🔍︎</button>
-                    <li>Air Quality</li>
-                    <li>Forecast</li>
-                </ul>
-            </nav>
+   <div id="user-interface">
+    <div id="data-background">
+        <nav id="navbar">
+            <ul>
+                <input type="text" id="city-input" placeholder="Enter city name">
+                <button id="search-btn">🔍︎</button>
+                <li>Air Quality</li>
+                <li>Forecast</li>
+            </ul>
+        </nav>
 
-            <div id="data-space"></div>
+        <div id="data-space">
+
+            <!--  Weather details will be displayed here -->
+            <div id="weather-div">
+                <div id="city-card">
+                    <div id="city-div">
+                        <h2>City</h2>
+                        <h1>Temp</h1>
+                        <h3>Cloudy</h3>
+                        <h4>Min/Max</h4>
+                    </div>
+                </div>
+
+                <!-- Current weather details will be displayed here -->
+                <div id="other-details">
+                    <div class="detail-card"></div>
+                    <div class="detail-card"></div>
+                    <div class="detail-card"></div>
+                    <div class="detail-card"></div>
+                </div>
+            </div>
+
+             <!-- Forecast details will be displayed here -->
+            <div id="other-days"></div>
+
         </div>
-
-
-        <div id="weather-div"></div>
+        </div> 
     </div>
 
 </body>
+
 </html>
