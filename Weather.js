@@ -9,8 +9,16 @@ async function apidata(cityname) {
   return data;
 }
 
+function Explore() {
+  let landing=document.getElementById('landing-page');
+  let user=document.getElementById('user-interface');
+
+  landing.style.display='none';
+  user.style.display='block';
+}
 
 async function search(){
+
     let input = document.getElementById('city-input').value;
     let cityname= document.getElementById('cityname');
     let temp=document.getElementById('temp');
@@ -26,7 +34,7 @@ async function search(){
     cityname.innerText=data.name;
     temp.innerText=data.main.temp + ' °C';
     weather.innerText=data.weather[0].main;
-    minmax.innerText=data.main.temp_min + ' / ' + data.main.temp_max;
+    minmax.innerText='Min: '+data.main.temp_min + '°C' + ' / ' + 'Max: ' +data.main.temp_max+'°C';
     humidity.innerText=data.main.humidity + ' %';
     wind.innerText=data.wind.speed + ' km/hr';
     pressure.innerText=data.main.pressure + ' hPa';
