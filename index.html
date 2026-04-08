@@ -20,7 +20,7 @@
         <nav id="navbar">
             <ul>
                 <input type="text" id="city-input" placeholder="Enter city name">
-                <button id="search-btn">🔍︎</button>
+                <button id="search-btn" onclick="search()">🔍︎</button>
                 <div>
                     <li style="text-align: center; font-size: 186x;">彡</li>
                     <li>Air Quality</li>
@@ -40,10 +40,10 @@
 
                 <div id="city-card">
                     <div id="city-div">
-                        <h2 style="font-size: 40px;">Delhi</h2>
-                        <h1 style="font-size: 60px;">26 F</h1>
-                        <h3 style="font-weight: lighter; font-size: 20px;">Cloudy</h3>
-                        <h4 style="font-weight: normal; font-size:20px;">34/78</h4>
+                        <h2 style="font-size: 25px;font-weight: normal;" id="cityname">Delhi</h2>
+                        <h1 style="font-size: 45px; font-weight: normal;" id="temp">26 F</h1>
+                        <h3 style="font-weight: lighter; font-size: 20px;" id="weather">Cloudy</h3>
+                        <h4 style="font-weight: normal; font-size:20px;" id="minmax">34/78</h4>
                     </div>
                 </div>
 
@@ -53,16 +53,16 @@
                     <div class="detail-card">
                             <img src="https://tse2.mm.bing.net/th/id/OIP.BSDOhLhA0GaZlxEHTsjLUwHaFO?rs=1&pid=ImgDetMain&o=7&rm=3">
                             <div style="display: inline;">
-                                <h3 >Humidity</h3>
-                                <h2 style="text-align: center; line-height: 50px;" >80%</h2>
+                                <h3  >Humidity</h3>
+                                <h2 style="text-align: center; line-height: 50px;" id="humidity" >80%</h2>
                             </div>
                     </div>
 
                     <div class="detail-card">
                             <img src="https://images.emojiterra.com/google/android-10/share/1f321.jpg">
                             <div style="display: inline;">
-                                <h3 >Apparent</h3>
-                                <h2 style="text-align: center; line-height: 50px;" >80 </h2>
+                                <h3 >Feels like</h3>
+                                <h2 style="text-align: center; line-height: 50px;" id="feelslike" >80 </h2>
                             </div>
                     </div>
 
@@ -70,7 +70,7 @@
                             <img src="https://tse2.mm.bing.net/th/id/OIP.VhwMyHO6JprutbdIXj1uXgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
                             <div style="display: inline;">
                                 <h3>Wind Velocity</h3>
-                                <h2 style="text-align: center; line-height: 50px;" >20 km/hr</h2>
+                                <h2 style="text-align: center; line-height: 50px;" id="wind" >20 km/hr</h2>
                             </div>
                     </div>
                     
@@ -78,7 +78,7 @@
                             <img src="https://st.depositphotos.com/1026280/53601/v/450/depositphotos_536016576-stock-illustration-manometer-scales-pressure-gauge-compression.jpg">
                             <div style="display: inline;">
                                 <h3>Pressue</h3>
-                                <h2 style="text-align: center; line-height: 50px;" >20 hPa</h2>
+                                <h2 style="text-align: center; line-height: 50px;" id="pressure" >20 hPa</h2>
                             </div>
                     </div>
                    
@@ -91,6 +91,7 @@
         </div>
         </div> 
     </div>
+    <script src="Weather.js"></script>
 
 </body>
 

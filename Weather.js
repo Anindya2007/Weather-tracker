@@ -5,41 +5,30 @@ async function apidata(cityname) {
   const api = `https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${apikey}&units=metric`;
   const res = await fetch(api);
   const data = await res.json();
+  console.log(data);
   return data;
 }
 
 
-//For using the data in the UI
-const button = document.getElementById('search-btn');
+async function search(){
+    let input = document.getElementById('city-input').value;
+    let cityname= document.getElementById('cityname');
+    let temp=document.getElementById('temp');
+    let weather=document.getElementById('weather');
+    let minmax=document.getElementById('minmax');
+    let humidity=document.getElementById('humidity');
+    let wind=document.getElementById('wind');
+    let pressure=document.getElementById('pressure');
+    let feelslike=document.getElementById('feelslike');
 
-button.addEventListener('click',async () => {
+    let data = await apidata(input);
 
-  const cityname = document.getElementById('cityname').value.trim();
-
-    if (!cityname){
-      alert('Please enter a city name!')
-      return
-    }
-
-  let display = document.getElementById('city');
-  let temperature = document.getElementById('temperature');
-  let high = document.getElementById('high_text');
-  let low = document.getElementById('low_text');
-  let feels = document.getElementById('feels_like');
-  let wind = document.getElementById('wind-speed');
-  let pressure = document.getElementById('Pressure');
-  let humidity = document.getElementById('Humidity');
-
-  const data = await apidata(cityname);
-
-  display.innerText = cityname;
-  temperature.innerText = `${data.main.temp.toFixed(1)}°C`;
-  high.innerText = `High: ${data.main.temp_max.toFixed(1)}°C`;
-  low.innerText = `Low: ${data.main.temp_min.toFixed(1)}°C`;
-  feels.textContent = `${data.main.feels_like.toFixed(1)}`;
-  wind.textContent = `${data.wind.speed}`;
-  pressure.textContent = `${data.main.pressure}`;
-  humidity.textContent = `${data.main.humidity}`;
-
-})
-
+    cityname.innerText=data.name;
+    temp.innerText=data.main.temp + ' °C';
+    weather.innerText=data.weather[0].main;
+    minmax.innerText=data.main.temp_min + ' / ' + data.main.temp_max;
+    humidity.innerText=data.main.humidity + ' %';
+    wind.innerText=data.wind.speed + ' km/hr';
+    pressure.innerText=data.main.pressure + ' hPa';
+    feelslike.innerText=data.main.feels_like + ' °C';
+}
