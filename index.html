@@ -5,16 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="stylesheet" href="Landing.css">
     <link rel="stylesheet" href="Weather.css">
 </head>
 
 <body>
+    <!-- Code for Landing Page -->
     <div id="landing-page">
-        <h1>DECODE THE SKY</h1>
+        <h1 style="text-shadow: black 3px 3px 4px;">DECODE THE SKY</h1>
         <h3>Real-time weather insights for your next big adventure.</h3>
         <button id="enter-btn">EXPLORE NOW</button>
     </div>
 
+    <!-- Code for dashboard -->
    <div id="user-interface">
     <div id="data-background">
         <nav id="navbar">
@@ -26,7 +29,7 @@
                     <li>Air Quality</li>
                 </div>
                 
-                <div>
+                <div id="forecast">
                     <li style="text-align: center;font-size: 16px;">📡</li>
                     <li>Forecast</li>
                 </div>
@@ -91,6 +94,10 @@
         </div>
         </div> 
     </div>
+
+    <!-- Code for the forecats page -->
+
+    
     <script src="Weather.js"></script>
 
 </body>
