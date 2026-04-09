@@ -7,6 +7,7 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="Landing.css">
     <link rel="stylesheet" href="Weather.css">
+    <link rel="stylesheet" href="Forecast.css">
 </head>
 
 <body>
@@ -18,17 +19,17 @@
     </div>
 
     <!-- Code for dashboard -->
-   <div id="user-interface">
-    <div id="data-background">
+    <div id="user-interface">
+        <div id="data-background">
         <nav id="navbar">
             <ul>
                 <input type="text" id="city-input" placeholder="Enter city name">
                 <button id="search-btn" onclick="search()">🔍︎</button>
                 <div>
-                    <li style="text-align: center; font-size: 186x;">彡</li>
+                    <li style="text-align: center; font-size: 16px;">彡</li>
                     <li>Air Quality</li>
                 </div>
-                
+
                 <div id="forecast">
                     <li style="text-align: center;font-size: 16px;">📡</li>
                     <li>Forecast</li>
@@ -54,35 +55,35 @@
                 <div id="other-details">
                     
                     <div class="detail-card">
-                            <img src="https://tse2.mm.bing.net/th/id/OIP.BSDOhLhA0GaZlxEHTsjLUwHaFO?rs=1&pid=ImgDetMain&o=7&rm=3">
-                            <div style="display: inline;">
-                                <h3  >Humidity</h3>
-                                <h2 style="text-align: center; line-height: 50px;" id="humidity" >0%</h2>
-                            </div>
+                        <img src="https://tse2.mm.bing.net/th/id/OIP.BSDOhLhA0GaZlxEHTsjLUwHaFO?rs=1&pid=ImgDetMain&o=7&rm=3">
+                        <div style="display: inline;">
+                            <h3>Humidity</h3>
+                            <h2 style="text-align: center; line-height: 50px;" id="humidity">0%</h2>
+                        </div>
                     </div>
 
                     <div class="detail-card">
-                            <img src="https://images.emojiterra.com/google/android-10/share/1f321.jpg">
-                            <div style="display: inline;">
-                                <h3 >Feels like</h3>
-                                <h2 style="text-align: center; line-height: 50px;" id="feelslike" >0 </h2>
-                            </div>
+                        <img src="https://images.emojiterra.com/google/android-10/share/1f321.jpg">
+                        <div style="display: inline;">
+                            <h3>Feels Like</h3>
+                            <h2 style="text-align: center; line-height: 50px;" id="feelslike">0</h2>
+                        </div>
                     </div>
 
                     <div class="detail-card">
-                            <img src="https://tse2.mm.bing.net/th/id/OIP.VhwMyHO6JprutbdIXj1uXgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
-                            <div style="display: inline;">
-                                <h3>Wind Velocity</h3>
-                                <h2 style="text-align: center; line-height: 50px;" id="wind" >0 km/hr</h2>
-                            </div>
+                        <img src="https://tse2.mm.bing.net/th/id/OIP.VhwMyHO6JprutbdIXj1uXgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
+                        <div style="display: inline;">
+                            <h3>Wind Velocity</h3>
+                            <h2 style="text-align: center; line-height: 50px;" id="wind">0 km/hr</h2>
+                        </div>
                     </div>
                     
                     <div class="detail-card">
-                            <img src="https://st.depositphotos.com/1026280/53601/v/450/depositphotos_536016576-stock-illustration-manometer-scales-pressure-gauge-compression.jpg">
-                            <div style="display: inline;">
-                                <h3>Pressue</h3>
-                                <h2 style="text-align: center; line-height: 50px;" id="pressure" >0 hPa</h2>
-                            </div>
+                        <img src="https://st.depositphotos.com/1026280/53601/v/450/depositphotos_536016576-stock-illustration-manometer-scales-pressure-gauge-compression.jpg">
+                        <div style="display: inline;">
+                            <h3>Pressure</h3>
+                            <h2 style="text-align: center; line-height: 50px;" id="pressure">0 hPa</h2>
+                        </div>
                     </div>
                    
                 </div>
@@ -96,7 +97,68 @@
     </div>
 
     <!-- Code for the forecats page -->
+    <div id="forecast">
+        <div id="forecast-background">
+            <h1>Air Quality & Gas Concentration</h1>
 
+            <div id="aqi-card" class="card">
+                <h2>🌫️ Air Quality Index</h2>
+                <p id="aqi-value">AQI: --</p>
+            </div>
+
+            <div id="gas-grid">
+                <div class="gas-card">
+                    <h3>🫁 CO</h3>
+                    <p id="co">-- μg/m³</p>
+                </div>
+
+                <div class="gas-card">
+                    <h3>🚦 NO</h3>
+                    <p id="no">-- μg/m³</p>
+                </div>
+
+                <div class="gas-card">
+                    <h3>🏭 NO₂</h3>
+                    <p id="no2">-- μg/m³</p>
+                </div>
+
+                <div class="gas-card">
+                    <h3>🌤️ O₃</h3>
+                    <p id="o3">-- μg/m³</p>
+                </div>
+
+                <div class="gas-card">
+                    <h3>🌋 SO₂</h3>
+                    <p id="so2">-- μg/m³</p>
+                </div>
+
+                <div class="gas-card">
+                    <h3>💨 PM2.5</h3>
+                    <p id="pm2_5">-- μg/m³</p>
+                </div>
+
+                <div class="gas-card">
+                    <h3>🌪️ PM10</h3>
+                    <p id="pm10">-- μg/m³</p>
+                </div>
+
+                <div class="gas-card">
+                    <h3>🧪 NH₃</h3>
+                    <p id="nh3">-- μg/m³</p>
+                </div>
+
+                <div class="gas-card">
+                    <h3>🫧 O₂</h3>
+                    <p id="o2">-- %</p>
+                </div>
+
+                <div class="gas-card">
+                    <h3>🏙️ CO₂</h3>
+                    <p id="co2">-- ppm</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="Weather.js"></script>
 

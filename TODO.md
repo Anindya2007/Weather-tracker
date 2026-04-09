@@ -1,0 +1,4 @@
+- [x] Replace forecast placeholder with Air Quality + concentration card layout in index.html.
+- [x] Add appealing glass-effect card styles and proper grid arrangement in Forecast.css.
+- [x] Keep color scheme and code style consistent with dashboard.
+- [x] Verify HTML/CSS selector consistency and update TODO completion.
