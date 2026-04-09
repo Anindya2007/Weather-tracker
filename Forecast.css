@@ -1,5 +1,5 @@
 #forecast{
-    display: block;
+    display: none;
     background:
         radial-gradient(circle at 88% 6%, rgba(147, 197, 253, 0.12), transparent 38%),
         radial-gradient(circle at 12% 92%, rgba(96, 165, 250, 0.08), transparent 34%),
