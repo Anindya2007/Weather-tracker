@@ -10,19 +10,6 @@ async function apidata(cityname) {
   return data;
 }
 
-async function airPullution(lat,lon){
-  const apikey = '0441e7dcc94ee6ddd6a68df3843ca1e6';
-  const api = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apikey}`;
-  const res = await fetch(api);
-  const data = await res.json();
-  console.log(data.list[0]);
-  return data;
-}
-
-
-
-
-
 function Explore() {
   let landing=document.getElementById('landing-page');
   let user=document.getElementById('user-interface');
@@ -32,7 +19,7 @@ function Explore() {
 }
 
 
-
+ 
 async function search(){
 
     let input = document.getElementById('city-input').value;
@@ -58,7 +45,6 @@ async function search(){
     wind.innerText=data.wind.speed + ' km/hr';
     pressure.innerText=data.main.pressure + ' hPa';
     feelslike.innerText=data.main.feels_like + ' °C';
-
 
 }
 
