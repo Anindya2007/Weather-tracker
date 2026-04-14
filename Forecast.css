@@ -8,7 +8,7 @@ nav #forecast{
 
 /* Actual forecast section layout */
 body > #forecast{
-    display: block;
+    display: none;
     background:
         radial-gradient(circle at 88% 6%, rgba(147, 197, 253, 0.12), transparent 38%),
         radial-gradient(circle at 12% 92%, rgba(96, 165, 250, 0.08), transparent 34%),
@@ -28,6 +28,35 @@ body > #forecast{
     overflow-y: auto;
     border: 1px solid rgba(255, 255, 255, 0.12);
     padding: 34px 36px 30px;
+}
+
+#forecast-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+#forecast-back-btn{
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    background: rgba(255, 255, 255, 0.12);
+    color: #f8fbff;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#forecast-back-btn:hover{
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#forecast-city{
+    color: #dbeafe;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 #forecast-background h1{
@@ -200,6 +229,11 @@ body > #forecast{
     #forecast-background{
         padding: 24px 16px 20px;
         border-radius: 0;
+    }
+
+    #forecast-header{
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     #forecast-background h1{

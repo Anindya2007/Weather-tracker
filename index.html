@@ -25,13 +25,13 @@
                 <ul>
                     <input type="text" id="city-input" placeholder="Enter city name">
                     <button id="search-btn" onclick="search()">🔍︎</button>
-                    <div>
-                        <li style="text-align: center; font-size: 16px;">彡</li>
+                    <div id="air-quality-tab" style="cursor: pointer;">
+                        <li>彡</li>
                         <li>Air Quality</li>
                     </div>
 
-                    <div id="forecast">
-                        <li style="text-align: center;font-size: 16px;">📡</li>
+                    <div id="forecast-tab" style="cursor: pointer;">
+                        <li>📡</li>
                         <li>Forecast</li>
                     </div>
                 </ul>
@@ -44,10 +44,10 @@
 
                     <div id="city-card">
                         <div id="city-div">
-                            <h2 style="font-size: 25px;font-weight: normal;" id="cityname">--.--</h2>
-                            <h1 style="font-size: 45px; font-weight: normal;" id="temp">0 °C</h1>
-                            <h3 style="font-weight: lighter; font-size: 20px;" id="weather">--.---</h3>
-                            <h4 style="font-weight: normal; font-size:20px;" id="minmax">Min: 0 °C / Max: 0 °C</h4>
+                            <h2 id="cityname">--.--</h2>
+                            <h1 id="temp">0 °C</h1>
+                            <h3 id="weather">--.---</h3>
+                            <h4 id="minmax">Min: 0 °C / Max: 0 °C</h4>
                         </div>
                     </div>
 
@@ -57,35 +57,35 @@
                         <div class="detail-card">
                             <img
                                 src="https://tse2.mm.bing.net/th/id/OIP.BSDOhLhA0GaZlxEHTsjLUwHaFO?rs=1&pid=ImgDetMain&o=7&rm=3">
-                            <div style="display: inline;">
+                            <div>
                                 <h3>Humidity</h3>
-                                <h2 style="text-align: center; line-height: 50px;" id="humidity">0%</h2>
+                                <h2 id="humidity">0%</h2>
                             </div>
                         </div>
 
                         <div class="detail-card">
                             <img src="https://images.emojiterra.com/google/android-10/share/1f321.jpg">
-                            <div style="display: inline;">
+                            <div>
                                 <h3>Feels Like</h3>
-                                <h2 style="text-align: center; line-height: 50px;" id="feelslike">0</h2>
+                                <h2 id="feelslike">0</h2>
                             </div>
                         </div>
 
                         <div class="detail-card">
                             <img
                                 src="https://tse2.mm.bing.net/th/id/OIP.VhwMyHO6JprutbdIXj1uXgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
-                            <div style="display: inline;">
+                            <div>
                                 <h3>Wind Velocity</h3>
-                                <h2 style="text-align: center; line-height: 50px;" id="wind">0 km/hr</h2>
+                                <h2 id="wind">0 km/hr</h2>
                             </div>
                         </div>
 
                         <div class="detail-card">
                             <img
                                 src="https://st.depositphotos.com/1026280/53601/v/450/depositphotos_536016576-stock-illustration-manometer-scales-pressure-gauge-compression.jpg">
-                            <div style="display: inline;">
+                            <div>
                                 <h3>Pressure</h3>
-                                <h2 style="text-align: center; line-height: 50px;" id="pressure">0 hPa</h2>
+                                <h2 id="pressure">0 hPa</h2>
                             </div>
                         </div>
 
@@ -102,6 +102,10 @@
     <!-- Code for the forecats page -->
     <div id="forecast">
         <div id="forecast-background">
+            <div id="forecast-header">
+                <button id="forecast-back-btn">← Back to Dashboard</button>
+                <p id="forecast-city">City: --</p>
+            </div>
             <h1>Atmosphere Insights</h1>
 
             <div id="forecast-top">
